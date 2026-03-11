@@ -3,57 +3,64 @@ import { useEffect, useRef } from 'react'
 export default function CustomCursor() {
   const cursorRef = useRef(null)
   const followerRef = useRef(null)
-  const posRef = useRef({ x: 0, y: 0 })
-  const followerPosRef = useRef({ x: 0, y: 0 })
+  const mousePos = useRef({ x: -100, y: -100 })
+  const followerPos = useRef({ x: -100, y: -100 })
+  const rafRef = useRef(null)
 
   useEffect(() => {
     const cursor = cursorRef.current
     const follower = followerRef.current
     if (!cursor || !follower) return
 
+    // Use transform instead of left/top — GPU-accelerated, zero layout cost
+    cursor.style.willChange = 'transform'
+    follower.style.willChange = 'transform'
+
     const onMove = (e) => {
-      posRef.current = { x: e.clientX, y: e.clientY }
-      cursor.style.left = `${e.clientX - 6}px`
-      cursor.style.top = `${e.clientY - 6}px`
+      mousePos.current.x = e.clientX
+      mousePos.current.y = e.clientY
+      // Dot follows instantly — no lag at all
+      cursor.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`
     }
 
-    let raf
-    const animateFollower = () => {
-      followerPosRef.current.x += (posRef.current.x - followerPosRef.current.x) * 0.12
-      followerPosRef.current.y += (posRef.current.y - followerPosRef.current.y) * 0.12
-      follower.style.left = `${followerPosRef.current.x - 16}px`
-      follower.style.top = `${followerPosRef.current.y - 16}px`
-      raf = requestAnimationFrame(animateFollower)
+    const animate = () => {
+      // Higher lerp = snappier follower ring (0.18 is fast but still smooth)
+      followerPos.current.x += (mousePos.current.x - followerPos.current.x) * 0.18
+      followerPos.current.y += (mousePos.current.y - followerPos.current.y) * 0.18
+      follower.style.transform = `translate(${followerPos.current.x - 16}px, ${followerPos.current.y - 16}px)`
+      rafRef.current = requestAnimationFrame(animate)
     }
-    raf = requestAnimationFrame(animateFollower)
+    rafRef.current = requestAnimationFrame(animate)
 
     const onEnter = () => {
-      cursor.style.transform = 'scale(2.5)'
-      follower.style.transform = 'scale(1.5)'
+      cursor.style.transform += ' scale(2.5)'
       follower.style.borderColor = 'rgba(139,92,246,0.8)'
+      follower.style.scale = '1.5'
     }
     const onLeave = () => {
-      cursor.style.transform = 'scale(1)'
-      follower.style.transform = 'scale(1)'
       follower.style.borderColor = 'rgba(99,102,241,0.5)'
+      follower.style.scale = '1'
     }
 
-    document.addEventListener('mousemove', onMove)
-    document.querySelectorAll('a, button, [role="button"]').forEach((el) => {
-      el.addEventListener('mouseenter', onEnter)
-      el.addEventListener('mouseleave', onLeave)
+    // Use event delegation instead of attaching to every element
+    document.addEventListener('mousemove', onMove, { passive: true })
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest('a, button, [role="button"]')) onEnter()
+    })
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest('a, button, [role="button"]')) onLeave()
     })
 
     return () => {
       document.removeEventListener('mousemove', onMove)
-      cancelAnimationFrame(raf)
+      cancelAnimationFrame(rafRef.current)
     }
   }, [])
 
   return (
     <>
-      <div ref={cursorRef} className="custom-cursor hidden md:block" />
-      <div ref={followerRef} className="custom-cursor-follower hidden md:block" />
+      <div ref={cursorRef} className="custom-cursor hidden md:block" style={{ left: 0, top: 0 }} />
+      <div ref={followerRef} className="custom-cursor-follower hidden md:block" style={{ left: 0, top: 0 }} />
     </>
   )
 }

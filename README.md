@@ -6,7 +6,7 @@ A modern, full-featured developer portfolio built with **React + Vite + Tailwind
 
 ## ✨ Features
 
-- 🎨 Dark mode with glassmorphism UI No
+- 🎨 Dark mode with glassmorphism UI
 - 🌊 Parallax hero with mountain background
 - 🔮 Smooth Framer Motion animations
 - 🎯 Skills section with animated progress bars
