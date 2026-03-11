@@ -125,7 +125,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-body leading-relaxed"
         >
-          Software engineer & competitive programmer crafting elegant solutions
+          Software engineer who loves competitive programmer crafting elegant solutions
           at the intersection of algorithms and real-world impact.
         </motion.p>
 
