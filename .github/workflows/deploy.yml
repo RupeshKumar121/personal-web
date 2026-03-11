@@ -45,12 +45,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-```
-
-**Step 5 — Scroll down, click "Commit changes" → "Commit changes" again**
-
-**Step 6 — Go to Settings → Pages → Source → switch to "GitHub Actions" → Save**
-
-**Step 7 — Go to the Actions tab:**
-```
-https://github.com/RupeshKumar121/personal-web/actions
