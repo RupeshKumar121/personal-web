@@ -202,27 +202,27 @@ export const skills = [
 ];
 
 export const contactInfo = {
-  email: "dev@example.com",
-  phone: "+91 98765 43210",
+  email: "rupesh.ipm25@iimshillong.ac.in",
+  phone: "+91 9602069257",
   profiles: [
     {
       name: "GitHub",
-      url: "https://github.com",
-      handle: "@yourusername",
+      url: "https://github.com/RupeshKumar121",
+      handle: "RupeshKumar121",
       icon: "github",
       color: "#e2e8f0",
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com",
-      handle: "Your Name",
+      url: "https://www.linkedin.com/in/rupeshkumariims/",
+      handle: "rupeshkumariims",
       icon: "linkedin",
       color: "#0a66c2",
     },
     {
       name: "CodeChef",
-      url: "https://codechef.com",
-      handle: "@yourhandle",
+      url: "https://www.codechef.com/users/rupeshkumar29",
+      handle: "@rupeshkumar29",
       icon: "codechef",
       color: "#5b4638",
     },
@@ -235,8 +235,8 @@ export const contactInfo = {
     },
     {
       name: "Codeforces",
-      url: "https://codeforces.com",
-      handle: "@yourhandle",
+      url: "https://codeforces.com/profile/RupeshKumar_121",
+      handle: "@RupeshKumar_121",
       icon: "codeforces",
       color: "#1992d4",
     },
