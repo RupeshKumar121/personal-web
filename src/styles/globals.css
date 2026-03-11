@@ -184,7 +184,7 @@
   position: fixed;
   pointer-events: none;
   z-index: 99999;
-  mix-blend-mode: screen;
+
   top: 0;
   left: 0;
   /* No transition on the dot — it must be instant */
