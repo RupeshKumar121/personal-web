@@ -48,7 +48,7 @@ export const projects = [
     title: "Skill Share platform to share and learn from peers",
     shortDesc: "A full-stack blogging platform built for developers with markdown support and code highlighting.",
     description: "A modern full-stack blogging platform tailored for developers. Features rich markdown editing with live preview, syntax-highlighted code blocks, tags and categories, and a clean reading experience inspired by popular dev communities.",
-    thumbnail: "/personal-web/public/img/skillshare.png",
+    thumbnail: "/personal-web/img/skillshare.png",
     banner: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=90",
     tags: ["Node.js", "React", "MongoDB", "Full Stack"],
     techs: ["React", "Node.js", "Express", "MongoDB", "JWT", "Marked.js", "Prism.js"],
