@@ -45,7 +45,7 @@ export const projects = [
   },
   {
     id: "Skill Swap",
-    title: "Skill Swap",
+    title: "Skill Swap ",
     shortDesc: "A peer-to-peer skill exchange platform for college students. Learn from your peers. Teach what you know. No money — just SkillCoins.",
     description: "SkillSwap is a web application built for student communities that digitizes and incentivizes peer-to-peer learning. Instead of paying for tutoring, students earn **SkillCoins** by mentoring others and spend them to get help themselves. Every new account starts with 100 SkillCoins Initially built for IIM Shillong**, the platform is designed to scale to other campuses across India.**Built by:** Rupesh Kumar",
     thumbnail: "/personal-web/img/thumb/skillswap.png",
