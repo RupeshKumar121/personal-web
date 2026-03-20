@@ -64,9 +64,7 @@ export default function AboutSection() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="relative flex justify-center"
           >
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 blur-3xl" />
-
-            <div className="relative w-full max-w-md h-[520px] rounded-3xl overflow-hidden gradient-border">
+            <div className="relative w-full max-w-xl h-[640px] rounded-3xl overflow-hidden border border-white/10">
               <img
                 src={about.photo}
                 alt={about.name}
