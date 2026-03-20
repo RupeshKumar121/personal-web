@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Mail, Phone, Github, Linkedin, Twitter, ExternalLink } from 'lucide-react'
+import { Mail, Phone, ExternalLink } from 'lucide-react'
 import { useScrollReveal } from './useScrollReveal'
 import { contactInfo } from '../data'
 const PlatformIcon = ({ name }) => {
@@ -87,124 +87,92 @@ export default function ContactSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Direct Contact */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={visible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          {/* Email */}
+          <motion.a
+            href={`mailto:${contactInfo.email}`}
+            whileHover={{ y: -4, scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border"
           >
-            <h3 className="font-display font-bold text-white text-xl mb-6">Direct Contact</h3>
-            <div className="grid grid-cols-2 gap-4">
-              <motion.a
-                href={`mailto:${contactInfo.email}`}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-indigo-500/15 border border-indigo-500/30 text-indigo-400">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <span className="font-display font-semibold text-sm text-white">Email</span>
-                </div>
-                <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
-                  {contactInfo.email}
-                </p>
-                <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="text-xs text-indigo-400 font-mono">Send mail</span>
-                  <ExternalLink className="w-3 h-3 text-indigo-400" />
-                </div>
-              </motion.a>
-
-              <motion.a
-                href={`tel:${contactInfo.phone}`}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-purple-500/15 border border-purple-500/30 text-purple-400">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  <span className="font-display font-semibold text-sm text-white">Phone</span>
-                </div>
-                <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
-                  {contactInfo.phone}
-                </p>
-                <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="text-xs text-indigo-400 font-mono">Call</span>
-                  <ExternalLink className="w-3 h-3 text-indigo-400" />
-                </div>
-              </motion.a>
-
-              <motion.a
-                href={contactInfo.profiles.find(p => p.name === 'LinkedIn')?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border col-span-2"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-blue-600/15 border border-blue-600/30 text-blue-400">
-                    <Linkedin className="w-4 h-4" />
-                  </div>
-                  <span className="font-display font-semibold text-sm text-white">LinkedIn</span>
-                </div>
-                <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
-                  {contactInfo.profiles.find(p => p.name === 'LinkedIn')?.handle}
-                </p>
-                <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="text-xs text-indigo-400 font-mono">Visit</span>
-                  <ExternalLink className="w-3 h-3 text-indigo-400" />
-                </div>
-              </motion.a>
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-indigo-500/15 border border-indigo-500/30 text-indigo-400">
+                <Mail className="w-4 h-4" />
+              </div>
+              <span className="font-display font-semibold text-sm text-white">Email</span>
             </div>
-          </motion.div>
+            <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
+              {contactInfo.email}
+            </p>
+            <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs text-indigo-400 font-mono">Send mail</span>
+              <ExternalLink className="w-3 h-3 text-indigo-400" />
+            </div>
+          </motion.a>
 
-          {/* Profiles Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          {/* Phone */}
+          <motion.a
+            href={`tel:${contactInfo.phone}`}
+            whileHover={{ y: -4, scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border"
           >
-            <h3 className="font-display font-bold text-white text-xl mb-6">Developer Profiles</h3>
-            <div className="grid grid-cols-2 gap-4">
-              {contactInfo.profiles.map((profile, i) => (
-                <motion.a
-                  key={profile.name}
-                  href={profile.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={visible ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.5 + i * 0.08 }}
-                  whileHover={{ y: -4, scale: 1.02 }}
-                  className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border"
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-purple-500/15 border border-purple-500/30 text-purple-400">
+                <Phone className="w-4 h-4" />
+              </div>
+              <span className="font-display font-semibold text-sm text-white">Phone</span>
+            </div>
+            <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
+              {contactInfo.phone}
+            </p>
+            <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs text-indigo-400 font-mono">Call</span>
+              <ExternalLink className="w-3 h-3 text-indigo-400" />
+            </div>
+          </motion.a>
+
+          {/* Developer Profiles */}
+          {contactInfo.profiles.map((profile, i) => (
+            <motion.a
+              key={profile.name}
+              href={profile.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={visible ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.4 + i * 0.08 }}
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <div
+                  className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                  style={{
+                    backgroundColor: `${profile.color}15`,
+                    border: `1px solid ${profile.color}30`,
+                    color: profile.color,
+                  }}
                 >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div
-                      className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                      style={{
-                        backgroundColor: `${profile.color}15`,
-                        border: `1px solid ${profile.color}30`,
-                        color: profile.color,
-                      }}
-                    >
-                      <PlatformIcon name={profile.icon} />
-                    </div>
-                    <span className="font-display font-semibold text-sm text-white">{profile.name}</span>
-                  </div>
-                  <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
-                    {profile.handle}
-                  </p>
-                  <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-xs text-indigo-400 font-mono">Visit</span>
-                    <ExternalLink className="w-3 h-3 text-indigo-400" />
-                  </div>
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+                  <PlatformIcon name={profile.icon} />
+                </div>
+                <span className="font-display font-semibold text-sm text-white">{profile.name}</span>
+              </div>
+              <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
+                {profile.handle}
+              </p>
+              <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs text-indigo-400 font-mono">Visit</span>
+                <ExternalLink className="w-3 h-3 text-indigo-400" />
+              </div>
+            </motion.a>
+          ))}
+        </motion.div>
       </div>
     </section>
   )
