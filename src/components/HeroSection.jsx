@@ -110,7 +110,7 @@ export default function HeroSection() {
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            className="font-display font-800 leading-[1.05] tracking-tight"
+            className="font-display font-extrabold leading-[1.05] tracking-tight"
             style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}
           >
             <span className="text-white block">Not just learning,</span>
@@ -144,7 +144,7 @@ export default function HeroSection() {
           </Link>
           <button
             onClick={scrollToSkills}
-            className="px-8 py-3 rounded-lg border border-indigo-500/30 text-slate-300 hover:text-white hover:border-indigo-500/60 transition-all font-display font-600 text-sm tracking-wide backdrop-blur-sm hover:bg-indigo-500/10"
+            className="px-8 py-3 rounded-lg border border-indigo-500/30 text-slate-300 hover:text-white hover:border-indigo-500/60 transition-all font-display font-semibold text-sm tracking-wide backdrop-blur-sm hover:bg-indigo-500/10"
           >
             Explore Skills
           </button>

@@ -35,7 +35,7 @@ function SkillCard({ skill }) {
           <span className="text-4xl">{skill.icon}</span>
         </div>
 
-        <h3 className="font-display font-700 text-white text-lg mb-1">{skill.name}</h3>
+        <h3 className="font-display font-bold text-white text-lg mb-1">{skill.name}</h3>
         <p className="text-slate-500 text-xs leading-relaxed mb-4">{skill.description}</p>
 
         {/* Category badge */}

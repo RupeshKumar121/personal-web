@@ -52,7 +52,7 @@ export default function Navbar() {
             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-glow-sm group-hover:shadow-glow-md transition-all duration-300">
               <Code2 className="w-5 h-5 text-white" />
             </div>
-            <span className="font-display font-800 text-lg tracking-tight text-white/90 group-hover:text-white transition-colors">
+            <span className="font-display font-extrabold text-lg tracking-tight text-white/90 group-hover:text-white transition-colors">
               dev<span className="gradient-text">.portfolio</span>
             </span>
           </Link>
@@ -71,12 +71,6 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="/resume.pdf"
-              className="btn-primary text-sm relative z-10 inline-flex items-center gap-2"
-            >
-              <span className="relative z-10">Resume</span>
-            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -110,17 +104,12 @@ export default function Navbar() {
                   <Link
                     to={link.href}
                     onClick={(e) => { handleHashLink(e, link.href); setMenuOpen(false) }}
-                    className="block py-3 px-4 text-slate-300 hover:text-white font-display font-600 text-lg tracking-wide border-b border-white/5 hover:border-indigo-500/30 transition-all"
+                    className="block py-3 px-4 text-slate-300 hover:text-white font-display font-semibold text-lg tracking-wide border-b border-white/5 hover:border-indigo-500/30 transition-all"
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-                <a href="/resume.pdf" className="btn-primary mt-2 text-center block relative z-10">
-                  <span className="relative z-10">Resume</span>
-                </a>
-              </motion.div>
             </div>
           </motion.div>
         )}

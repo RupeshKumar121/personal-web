@@ -27,7 +27,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
                 <Code2 className="w-4 h-4 text-white" />
               </div>
-              <span className="font-display font-700 text-white/90">
+              <span className="font-display font-bold text-white/90">
                 dev<span className="gradient-text">.portfolio</span>
               </span>
             </Link>
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-600 text-slate-300 mb-4 uppercase tracking-widest text-xs">
+            <h4 className="font-display font-semibold text-slate-300 mb-4 uppercase tracking-widest text-xs">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Socials */}
           <div>
-            <h4 className="font-display font-600 text-slate-300 mb-4 uppercase tracking-widest text-xs">
+            <h4 className="font-display font-semibold text-slate-300 mb-4 uppercase tracking-widest text-xs">
               Connect
             </h4>
             <div className="flex gap-3">

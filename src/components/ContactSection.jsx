@@ -95,7 +95,7 @@ export default function ContactSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="glass-card rounded-3xl p-8 gradient-border"
           >
-            <h3 className="font-display font-700 text-white text-xl mb-8">Direct Contact</h3>
+            <h3 className="font-display font-bold text-white text-xl mb-8">Direct Contact</h3>
             
             <div className="space-y-6">
               <a
@@ -154,7 +154,7 @@ export default function ContactSection() {
             animate={visible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h3 className="font-display font-700 text-white text-xl mb-6">Developer Profiles</h3>
+            <h3 className="font-display font-bold text-white text-xl mb-6">Developer Profiles</h3>
             <div className="grid grid-cols-2 gap-4">
               {contactInfo.profiles.map((profile, i) => (
                 <motion.a
@@ -179,7 +179,7 @@ export default function ContactSection() {
                     >
                       <PlatformIcon name={profile.icon} />
                     </div>
-                    <span className="font-display font-600 text-sm text-white">{profile.name}</span>
+                    <span className="font-display font-semibold text-sm text-white">{profile.name}</span>
                   </div>
                   <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
                     {profile.handle}

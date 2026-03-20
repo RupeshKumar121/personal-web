@@ -75,7 +75,7 @@ export default function ProjectDetailPage() {
         {/* Title + Links */}
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-6 mb-10">
           <div>
-            <h1 className="font-display font-800 text-white text-4xl sm:text-5xl tracking-tight mb-3">
+            <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl tracking-tight mb-3">
               {project.title}
             </h1>
             <div className="flex flex-wrap gap-2">
@@ -129,7 +129,7 @@ export default function ProjectDetailPage() {
             >
               <div className="flex items-center gap-2 mb-4">
                 <Target className="w-4 h-4 text-indigo-400" />
-                <h2 className="font-display font-700 text-white text-xl">About this project</h2>
+                <h2 className="font-display font-bold text-white text-xl">About this project</h2>
               </div>
               <p className="text-slate-400 leading-relaxed text-base">
                 {project.description}
@@ -145,7 +145,7 @@ export default function ProjectDetailPage() {
             >
               <div className="flex items-center gap-2 mb-3">
                 <Zap className="w-4 h-4 text-amber-400" />
-                <h2 className="font-display font-700 text-white text-lg">Problem Solved</h2>
+                <h2 className="font-display font-bold text-white text-lg">Problem Solved</h2>
               </div>
               <p className="text-slate-400 leading-relaxed text-sm">
                 {project.problemSolved}
@@ -160,7 +160,7 @@ export default function ProjectDetailPage() {
             >
               <div className="flex items-center gap-2 mb-5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <h2 className="font-display font-700 text-white text-xl">Key Features</h2>
+                <h2 className="font-display font-bold text-white text-xl">Key Features</h2>
               </div>
               <ul className="space-y-3">
                 {project.features.map((feature, i) => (
@@ -188,7 +188,7 @@ export default function ProjectDetailPage() {
               transition={{ delay: 0.3 }}
               className="glass-card rounded-2xl p-6"
             >
-              <h3 className="font-display font-700 text-white mb-4 text-sm uppercase tracking-widest">Tech Stack</h3>
+              <h3 className="font-display font-bold text-white mb-4 text-sm uppercase tracking-widest">Tech Stack</h3>
               <div className="flex flex-wrap gap-2">
                 {project.techs.map(tech => (
                   <span
@@ -208,7 +208,7 @@ export default function ProjectDetailPage() {
               transition={{ delay: 0.4 }}
               className="glass-card rounded-2xl p-6"
             >
-              <h3 className="font-display font-700 text-white mb-4 text-sm uppercase tracking-widest">Links</h3>
+              <h3 className="font-display font-bold text-white mb-4 text-sm uppercase tracking-widest">Links</h3>
               <div className="space-y-3">
                 {project.github && (
                   <a

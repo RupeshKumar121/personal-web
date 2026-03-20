@@ -41,7 +41,7 @@ export default function ProjectCard({ project, index = 0 }) {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="font-display font-700 text-white text-lg mb-2 group-hover:text-indigo-200 transition-colors">
+        <h3 className="font-display font-bold text-white text-lg mb-2 group-hover:text-indigo-200 transition-colors">
           {project.title}
         </h3>
         <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-2">
