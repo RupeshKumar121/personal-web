@@ -66,7 +66,7 @@ export default function AboutSection() {
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 blur-3xl" />
 
-            <div className="relative w-80 h-96 rounded-3xl overflow-hidden gradient-border">
+            <div className="relative w-full max-w-md h-[520px] rounded-3xl overflow-hidden gradient-border">
               <img
                 src={about.photo}
                 alt={about.name}
@@ -77,17 +77,6 @@ export default function AboutSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-midnight/60 via-transparent to-transparent" />
             </div>
-
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-4 -right-4 glass-card rounded-2xl px-4 py-3 border border-indigo-500/30"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-white text-xs font-mono">{about.badge}</span>
-              </div>
-            </motion.div>
 
             <div className="absolute -top-3 -left-3 w-6 h-6 rounded-full border-2 border-indigo-500/40" />
             <div className="absolute -top-3 -left-3 w-3 h-3 rounded-full bg-indigo-500/60 translate-x-1.5 translate-y-1.5" />
