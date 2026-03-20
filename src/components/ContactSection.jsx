@@ -146,16 +146,6 @@ export default function ContactSection() {
               </a>
             </div>
 
-            {/* CTA */}
-            <div className="mt-10 pt-8 border-t border-white/5">
-              <a
-                href={`mailto:${contactInfo.email}`}
-                className="btn-primary inline-flex items-center gap-2 w-full justify-center relative z-10"
-              >
-                <Mail className="w-4 h-4 relative z-10" />
-                <span className="relative z-10">Send me an email</span>
-              </a>
-            </div>
           </motion.div>
 
           {/* Profiles Grid */}
