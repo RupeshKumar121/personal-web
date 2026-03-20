@@ -7,12 +7,12 @@ import { about } from '../data'
 const highlightColors = ['text-indigo-300', 'text-purple-300', 'text-cyan-300']
 
 function HighlightedText({ text }) {
-  const parts = text.split(/(<[^>]+>)/g)
+  const parts = text.split(/(\[[^\]]+\])/g)
   let colorIndex = 0
   return (
     <>
       {parts.map((part, i) => {
-        if (part.startsWith('<') && part.endsWith('>')) {
+        if (part.startsWith('[') && part.endsWith(']')) {
           const color = highlightColors[colorIndex % highlightColors.length]
           colorIndex++
           return (

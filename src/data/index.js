@@ -45,9 +45,9 @@ export const projects = [
   },
   {
     id: "Skill Swap",
-    title: "Skill Swap ",
+    title: "Skill Swap",
     shortDesc: "A peer-to-peer skill exchange platform for college students. Learn from your peers. Teach what you know. No money — just SkillCoins.",
-    description: "SkillSwap is a web application built for student communities that digitizes and incentivizes peer-to-peer learning. Instead of paying for tutoring, students earn **SkillCoins** by mentoring others and spend them to get help themselves. Every new account starts with 100 SkillCoins Initially built for IIM Shillong**, the platform is designed to scale to other campuses across India.**Built by:** Rupesh Kumar",
+    description: "SkillSwap is a web application built for student communities that digitizes and incentivizes peer-to-peer learning. Instead of paying for tutoring, students earn SkillCoins by mentoring others and spend them to get help themselves. Every new account starts with 100 SkillCoins. Initially built for IIM Shillong, the platform is designed to scale to other campuses across India. Built by: Rupesh Kumar",
     thumbnail: "/personal-web/img/thumb/skillswap.png",
     banner: "/personal-web/img/banner/skillswap.png",
     tags: ["Node.js", "React", "MongoDB", "Full Stack"],
@@ -201,17 +201,17 @@ export const skills = [
   },
 ];
 
+// To highlight a word in a paragraph, wrap it in [square brackets]
+// First highlight = indigo, second = purple, third = cyan
 export const about = {
   name: "Rupesh Kumar",
-  photo: "/personal-web/img/profile.jpg", // ← replace with your actual photo
+  photo: "/personal-web/img/profile.jpg",
   badge: "Available for opportunities",
-  tagline: "Software Engineer & Competitive Programmer",
   paragraphs: [
-    "I'm a software engineer and competitive programmer with a passion for building things that matter. Currently pursuing my MBA at <IIM Shillong>, I bring a rare blend of technical depth and business thinking to every problem I tackle.",
-    "My journey in tech started with competitive programming — grinding through algorithms and data structures taught me to think clearly under pressure. That foundation now powers everything I build, from <algorithmic trading systems> to full-stack web applications.",
-    "When I'm not writing code, I'm exploring financial markets, contributing to open source, or mentoring peers through platforms like <SkillSwap> — a peer-learning app I built to digitize knowledge exchange within college communities.",
+    "I'm a software engineer and competitive programmer with a passion for building things that matter. Currently pursuing my MBA at [IIM Shillong], I bring a rare blend of technical depth and business thinking to every problem I tackle.",
+    "My journey in tech started with competitive programming — grinding through algorithms and data structures taught me to think clearly under pressure. That foundation now powers everything I build, from [algorithmic trading systems] to full-stack web applications.",
+    "When I'm not writing code, I'm exploring financial markets, contributing to open source, or mentoring peers through platforms like [SkillSwap] — a peer-learning app I built to digitize knowledge exchange within college communities.",
   ],
-  // Use <text> syntax above to highlight words in indigo/purple/cyan automatically
   stats: [
     { label: "Projects Built", value: "15+" },
     { label: "CP Problems Solved", value: "500+" },
@@ -220,6 +220,7 @@ export const about = {
   ],
 };
 
+export const contactInfo = {
   email: "xxxxxxxxxx@iimshillong.ac.in",
   phone: "+91 xxxxxxxxxx",
   profiles: [
