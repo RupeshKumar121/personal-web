@@ -201,7 +201,25 @@ export const skills = [
   },
 ];
 
-export const contactInfo = {
+export const about = {
+  name: "Rupesh Kumar",
+  photo: "/personal-web/img/profile.jpg", // ← replace with your actual photo
+  badge: "Available for opportunities",
+  tagline: "Software Engineer & Competitive Programmer",
+  paragraphs: [
+    "I'm a software engineer and competitive programmer with a passion for building things that matter. Currently pursuing my MBA at <IIM Shillong>, I bring a rare blend of technical depth and business thinking to every problem I tackle.",
+    "My journey in tech started with competitive programming — grinding through algorithms and data structures taught me to think clearly under pressure. That foundation now powers everything I build, from <algorithmic trading systems> to full-stack web applications.",
+    "When I'm not writing code, I'm exploring financial markets, contributing to open source, or mentoring peers through platforms like <SkillSwap> — a peer-learning app I built to digitize knowledge exchange within college communities.",
+  ],
+  // Use <text> syntax above to highlight words in indigo/purple/cyan automatically
+  stats: [
+    { label: "Projects Built", value: "15+" },
+    { label: "CP Problems Solved", value: "500+" },
+    { label: "Cups of Coffee", value: "∞" },
+    { label: "Years Coding", value: "3+" },
+  ],
+};
+
   email: "xxxxxxxxxx@iimshillong.ac.in",
   phone: "+91 xxxxxxxxxx",
   profiles: [

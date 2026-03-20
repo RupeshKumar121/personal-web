@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import HeroSection from '../components/HeroSection'
+import AboutSection from '../components/AboutSection'
 import SkillsSection from '../components/SkillsSection'
 import ContactSection from '../components/ContactSection'
 
@@ -13,6 +14,7 @@ export default function HomePage() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
       <HeroSection />
+      <AboutSection />
       <SkillsSection />
       <ContactSection />
     </motion.div>
