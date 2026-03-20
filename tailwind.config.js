@@ -9,7 +9,8 @@ export default {
       fontFamily: {
         display: ['Google Sans Flex', 'sans-serif'],
         body: ['Google Sans Flex', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        mono: ['Google Sans Flex', 'sans-serif'],
+        code: ['JetBrains Mono', 'monospace'],
       },
       colors: {
         midnight: '#050816',

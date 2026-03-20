@@ -2,8 +2,6 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, Github, Linkedin, Twitter, ExternalLink } from 'lucide-react'
 import { useScrollReveal } from './useScrollReveal'
 import { contactInfo } from '../data'
-
-// Platform icons as SVG
 const PlatformIcon = ({ name }) => {
   switch (name.toLowerCase()) {
     case 'github':
@@ -126,6 +124,23 @@ export default function ContactSection() {
                   <p className="text-slate-500 text-xs font-mono uppercase tracking-wider mb-0.5">Phone</p>
                   <p className="text-slate-200 group-hover:text-purple-300 transition-colors font-body">
                     {contactInfo.phone}
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href={contactInfo.profiles.find(p => p.name === 'LinkedIn')?.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center text-blue-400 group-hover:bg-blue-600/20 group-hover:border-blue-600/40 group-hover:scale-110 transition-all duration-300">
+                  <Linkedin className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-slate-500 text-xs font-mono uppercase tracking-wider mb-0.5">LinkedIn</p>
+                  <p className="text-slate-200 group-hover:text-blue-300 transition-colors font-body">
+                    {contactInfo.profiles.find(p => p.name === 'LinkedIn')?.handle}
                   </p>
                 </div>
               </a>

@@ -30,31 +30,13 @@ function SkillCard({ skill }) {
       />
 
       <div className="relative z-10">
-        {/* Icon + level */}
-        <div className="flex items-start justify-between mb-4">
+        {/* Icon */}
+        <div className="mb-4">
           <span className="text-4xl">{skill.icon}</span>
-          <div className="text-right">
-            <span className="font-mono text-xs text-slate-500 block">proficiency</span>
-            <span className="font-display font-700 text-lg" style={{ color: skill.color }}>
-              {skill.level}%
-            </span>
-          </div>
         </div>
 
         <h3 className="font-display font-700 text-white text-lg mb-1">{skill.name}</h3>
         <p className="text-slate-500 text-xs leading-relaxed mb-4">{skill.description}</p>
-
-        {/* Progress bar */}
-        <div className="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: `${skill.level}%` }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            viewport={{ once: true }}
-            className="h-full rounded-full"
-            style={{ background: `linear-gradient(90deg, ${skill.color}, ${skill.color}aa)` }}
-          />
-        </div>
 
         {/* Category badge */}
         <div className="mt-3">
