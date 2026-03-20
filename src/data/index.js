@@ -202,8 +202,8 @@ export const skills = [
 ];
 
 export const contactInfo = {
-  email: "rupesh.ipm25@iimshillong.ac.in",
-  phone: "+91 9602069257",
+  email: "xxxxxxxxxx@iimshillong.ac.in",
+  phone: "+91 xxxxxxxxxx",
   profiles: [
     {
       name: "GitHub",
