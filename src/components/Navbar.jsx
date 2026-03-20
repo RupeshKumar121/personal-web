@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Code2 } from 'lucide-react'
 
@@ -13,6 +13,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -27,9 +28,14 @@ export default function Navbar() {
       e.preventDefault()
       const id = href.replace('/#', '')
       if (location.pathname === '/') {
+        // Already on home page, just scroll
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
       } else {
-        window.location.href = href
+        // Navigate to home first, then scroll after page loads
+        navigate('/')
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+        }, 300)
       }
     }
   }

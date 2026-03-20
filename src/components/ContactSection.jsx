@@ -93,59 +93,71 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: -30 }}
             animate={visible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="glass-card rounded-3xl p-8 gradient-border"
           >
-            <h3 className="font-display font-bold text-white text-xl mb-8">Direct Contact</h3>
-            
-            <div className="space-y-6">
-              <a
+            <h3 className="font-display font-bold text-white text-xl mb-6">Direct Contact</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <motion.a
                 href={`mailto:${contactInfo.email}`}
-                className="flex items-center gap-4 group"
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border"
               >
-                <div className="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500/20 group-hover:border-indigo-500/40 group-hover:scale-110 transition-all duration-300">
-                  <Mail className="w-5 h-5" />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-indigo-500/15 border border-indigo-500/30 text-indigo-400">
+                    <Mail className="w-4 h-4" />
+                  </div>
+                  <span className="font-display font-semibold text-sm text-white">Email</span>
                 </div>
-                <div>
-                  <p className="text-slate-500 text-xs font-mono uppercase tracking-wider mb-0.5">Email</p>
-                  <p className="text-slate-200 group-hover:text-white group-hover:text-indigo-300 transition-colors font-body">
-                    {contactInfo.email}
-                  </p>
+                <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
+                  {contactInfo.email}
+                </p>
+                <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-xs text-indigo-400 font-mono">Send mail</span>
+                  <ExternalLink className="w-3 h-3 text-indigo-400" />
                 </div>
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
                 href={`tel:${contactInfo.phone}`}
-                className="flex items-center gap-4 group"
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border"
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:bg-purple-500/20 group-hover:border-purple-500/40 group-hover:scale-110 transition-all duration-300">
-                  <Phone className="w-5 h-5" />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-purple-500/15 border border-purple-500/30 text-purple-400">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <span className="font-display font-semibold text-sm text-white">Phone</span>
                 </div>
-                <div>
-                  <p className="text-slate-500 text-xs font-mono uppercase tracking-wider mb-0.5">Phone</p>
-                  <p className="text-slate-200 group-hover:text-purple-300 transition-colors font-body">
-                    {contactInfo.phone}
-                  </p>
+                <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
+                  {contactInfo.phone}
+                </p>
+                <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-xs text-indigo-400 font-mono">Call</span>
+                  <ExternalLink className="w-3 h-3 text-indigo-400" />
                 </div>
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
                 href={contactInfo.profiles.find(p => p.name === 'LinkedIn')?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 group"
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="glass-card rounded-2xl p-4 group cursor-pointer gradient-border col-span-2"
               >
-                <div className="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center text-blue-400 group-hover:bg-blue-600/20 group-hover:border-blue-600/40 group-hover:scale-110 transition-all duration-300">
-                  <Linkedin className="w-5 h-5" />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-blue-600/15 border border-blue-600/30 text-blue-400">
+                    <Linkedin className="w-4 h-4" />
+                  </div>
+                  <span className="font-display font-semibold text-sm text-white">LinkedIn</span>
                 </div>
-                <div>
-                  <p className="text-slate-500 text-xs font-mono uppercase tracking-wider mb-0.5">LinkedIn</p>
-                  <p className="text-slate-200 group-hover:text-blue-300 transition-colors font-body">
-                    {contactInfo.profiles.find(p => p.name === 'LinkedIn')?.handle}
-                  </p>
+                <p className="text-slate-500 text-xs font-mono truncate group-hover:text-slate-400 transition-colors">
+                  {contactInfo.profiles.find(p => p.name === 'LinkedIn')?.handle}
+                </p>
+                <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-xs text-indigo-400 font-mono">Visit</span>
+                  <ExternalLink className="w-3 h-3 text-indigo-400" />
                 </div>
-              </a>
+              </motion.a>
             </div>
-
           </motion.div>
 
           {/* Profiles Grid */}
