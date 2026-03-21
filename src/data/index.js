@@ -20,6 +20,52 @@ export const projects = [
     github: "https://github.com",
     demo: null,
     category: "ML / Finance",
+    content: [
+      {
+        type: "heading",
+        content: "System Architecture",
+      },
+      {
+        type: "text",
+        content: "The bot is split into three microservices: a data ingestion layer that streams live market data, an ML inference engine that generates trade signals, and an execution layer that places orders via the broker API.",
+      },
+      {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=1200&q=80",
+        alt: "Trading dashboard screenshot",
+        caption: "Live PnL dashboard showing real-time performance",
+        height: "400px",
+      },
+      {
+        type: "divider",
+      },
+      {
+        type: "heading",
+        content: "Demo Video",
+      },
+      {
+        type: "youtube",
+        videoId: "dQw4w9WgXcQ",
+        title: "Algorithmic Trading Bot Demo",
+      },
+      {
+        type: "callout",
+        label: "Note",
+        content: "The bot runs in paper trading mode by default. Switch to live trading only after thorough backtesting on your own data.",
+      },
+      {
+        type: "heading",
+        content: "Performance Screenshots",
+      },
+      {
+        type: "images",
+        cols: 2,
+        items: [
+          { src: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", caption: "Backtest results over 12 months" },
+          { src: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=600&q=80", caption: "Live trading session" },
+        ],
+      },
+    ],
   },
   {
     id: "dsa-visualizer",
@@ -65,6 +111,37 @@ export const projects = [
     github: "https://github.com/RupeshKumar121/SkillSwap",
     demo: "https://rupeshkumar121.github.io/Skillshare/",
     category: "Full Stack",
+    content: [
+      {
+        type: "heading",
+        content: "What is SkillSwap?",
+      },
+      {
+        type: "text",
+        content: "SkillSwap removes the money barrier from peer learning. Instead of paying for tutoring, students earn SkillCoins by teaching others and spend them to learn. It creates a self-sustaining knowledge economy within a campus.",
+      },
+      {
+        type: "callout",
+        label: "Built for IIM Shillong",
+        content: "Initially launched for the IIM Shillong student community, with plans to expand to other campuses across India.",
+      },
+      {
+        type: "image",
+        src: "/personal-web/img/thumb/skillswap.png",
+        alt: "SkillSwap platform screenshot",
+        caption: "SkillSwap home screen",
+        height: "420px",
+      },
+      {
+        type: "heading",
+        content: "Watch the Demo",
+      },
+      {
+        type: "youtube",
+        videoId: "dQw4w9WgXcQ",
+        title: "SkillSwap Platform Demo",
+      },
+    ],
   },
   {
     id: "competitive-tracker",
@@ -216,7 +293,7 @@ export const about = {
     { label: "Projects Built", value: "15+" },
     { label: "CP Problems Solved", value: "500+" },
     { label: "Cups of Coffee", value: "∞" },
-    { label: "Years Coding", value: "3+" },
+    { label: "Years Coding", value: "7+" },
   ],
 };
 
