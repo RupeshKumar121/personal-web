@@ -195,8 +195,8 @@ export default function ProjectDetailPage() {
         <div className="h-px bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent mb-10" />
 
         {/* 3-col main + 1-col sidebar */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-3 space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+          <div className="lg:col-span-4 space-y-8">
 
             {/* About */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
@@ -243,7 +243,7 @@ export default function ProjectDetailPage() {
           {/* Sidebar */}
           <div className="space-y-6">
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} className="glass-card rounded-2xl p-6">
-              <h3 className="font-display font-bold text-white mb-4 text-sm uppercase tracking-widest">Tech Stack</h3>
+              <h3 className="font-display font-bold text-white mb-4 text-sm uppercase tracking-widest">Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {project.techs.map(tech => (
                   <span key={tech} className="px-3 py-1.5 text-xs font-mono rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 hover:bg-indigo-500/20 transition-colors">{tech}</span>
