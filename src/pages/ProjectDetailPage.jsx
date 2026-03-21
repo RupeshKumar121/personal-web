@@ -10,21 +10,32 @@ const pageVariants = {
 }
 
 function ContentBlock({ block }) {
+  const s = block.style || {}   // inline styles from index.js
+  const cx = block.className || '' // extra classes from index.js
+
   switch (block.type) {
     case 'text':
-      return <p className="text-slate-400 leading-relaxed text-base">{block.content}</p>
+      return (
+        <p className={`text-slate-400 leading-relaxed text-base ${cx}`} style={s}>
+          {block.content}
+        </p>
+      )
 
     case 'heading':
-      return <h3 className="font-display font-bold text-white text-xl mt-8 mb-3">{block.content}</h3>
+      return (
+        <h3 className={`font-display font-bold text-white text-xl mt-8 mb-3 ${cx}`} style={s}>
+          {block.content}
+        </h3>
+      )
 
     case 'image':
       return (
-        <figure className="my-6">
+        <figure className={`my-6 ${cx}`} style={s}>
           <img
             src={block.src}
             alt={block.alt || ''}
             className="w-full rounded-2xl border border-white/10 object-cover"
-            style={{ maxHeight: block.height || '480px' }}
+            style={{ maxHeight: block.height || '480px', width: block.width || '100%', ...block.imgStyle }}
           />
           {block.caption && (
             <figcaption className="text-center text-slate-500 text-xs font-mono mt-2">{block.caption}</figcaption>
@@ -34,10 +45,15 @@ function ContentBlock({ block }) {
 
     case 'images':
       return (
-        <div className={`grid gap-4 my-6 ${block.cols === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
+        <div className={`grid gap-4 my-6 ${block.cols === 3 ? 'grid-cols-3' : 'grid-cols-2'} ${cx}`} style={s}>
           {block.items.map((img, i) => (
             <figure key={i}>
-              <img src={img.src} alt={img.alt || ''} className="w-full rounded-xl border border-white/10 object-cover h-48" />
+              <img
+                src={img.src}
+                alt={img.alt || ''}
+                className="w-full rounded-xl border border-white/10 object-cover"
+                style={{ height: img.height || '12rem', ...img.style }}
+              />
               {img.caption && <figcaption className="text-center text-slate-500 text-xs font-mono mt-1">{img.caption}</figcaption>}
             </figure>
           ))}
@@ -46,7 +62,7 @@ function ContentBlock({ block }) {
 
     case 'youtube':
       return (
-        <div className="my-6 rounded-2xl overflow-hidden border border-white/10 aspect-video">
+        <div className={`my-6 rounded-2xl overflow-hidden border border-white/10 aspect-video ${cx}`} style={s}>
           <iframe
             src={`https://www.youtube.com/embed/${block.videoId}`}
             title={block.title || 'YouTube video'}
@@ -58,13 +74,50 @@ function ContentBlock({ block }) {
       )
 
     case 'divider':
-      return <div className="h-px bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent my-6" />
+      return <div className={`h-px bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent my-6 ${cx}`} style={s} />
 
     case 'callout':
       return (
-        <div className="glass-card rounded-2xl p-5 border-l-4 border-indigo-500 my-4">
-          {block.label && <p className="text-indigo-400 text-xs font-mono uppercase tracking-widest mb-1">{block.label}</p>}
-          <p className="text-slate-300 text-sm leading-relaxed">{block.content}</p>
+        <div
+          className={`glass-card rounded-2xl p-5 border-l-4 my-4 ${cx}`}
+          style={{ borderLeftColor: block.color || '#6366f1', ...s }}
+        >
+          {block.label && (
+            <p className="text-xs font-mono uppercase tracking-widest mb-1" style={{ color: block.color || '#818cf8' }}>
+              {block.label}
+            </p>
+          )}
+          <p className="text-slate-300 text-sm leading-relaxed" style={block.textStyle}>{block.content}</p>
+        </div>
+      )
+
+    case 'pdf':
+      return (
+        <div className={`my-6 ${cx}`} style={s}>
+          {block.caption && (
+            <p className="text-slate-400 text-sm font-mono mb-2">{block.caption}</p>
+          )}
+          <div
+            className="rounded-2xl overflow-hidden border border-white/10"
+            style={{ height: block.height || '600px' }}
+          >
+            <iframe
+              src={`${block.src}#toolbar=1&navpanes=0&scrollbar=1`}
+              title={block.caption || 'PDF Document'}
+              className="w-full h-full bg-white"
+            />
+          </div>
+          <div className="mt-2 flex justify-end">
+            <a
+              href={block.src}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300 text-xs font-mono transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              Open PDF in new tab
+            </a>
+          </div>
         </div>
       )
 
