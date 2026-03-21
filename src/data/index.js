@@ -91,7 +91,7 @@ export const projects = [
   },
   {
     id: "Skill Swap",
-    title: "SkillSwap",
+    title: "Skill Swap",
     shortDesc: "A peer-to-peer skill exchange platform for college students. Learn from your peers. Teach what you know. No money — just SkillCoins.",
     description: "SkillSwap is a web application built for student communities that digitizes and incentivizes peer-to-peer learning. Instead of paying for tutoring, students earn SkillCoins by mentoring others and spend them to get help themselves. Every new account starts with 100 SkillCoins. Initially built for IIM Shillong, the platform is designed to scale to other campuses across India.",
     thumbnail: "/personal-web/img/thumb/skillswap.png",
@@ -111,7 +111,7 @@ export const projects = [
     ],
     problemSolved: "On-campus peer learning is informal and unstructured — students struggle to find help and experts go unrecognized. SkillSwap creates a self-sustaining knowledge economy where teaching is rewarded and learning is accessible to everyone, without any money changing hands.",
     github: "https://github.com/RupeshKumar121/SkillSwap",
-    demo: "https://rupeshkumar121.github.io/Skillshare/",
+    demo: "https://rupeshkumar121.github.io/SkillSwap/",
     category: "Full Stack",
     content: [
       {
@@ -145,7 +145,7 @@ export const projects = [
       },
       {
         type: "image",
-        src: "/personal-web/img/thumb/skillswap.png",
+        src: "/personal-web/img/content/skillswap1.png",
         alt: "SkillSwap platform screenshot",
         caption: "SkillSwap home screen",
         height: "420px",
@@ -302,7 +302,7 @@ export const about = {
     { label: "Projects Built", value: "15+" },
     { label: "CP Problems Solved", value: "500+" },
     { label: "Cups of Coffee", value: "∞" },
-    { label: "Years Coding", value: "3+" },
+    { label: "Years Coding", value: "7+" },
   ],
 };
 
@@ -333,8 +333,8 @@ export const contactInfo = {
     },
     {
       name: "Unstop",
-      url: "https://unstop.com",
-      handle: "@yourhandle",
+      url: "https://unstop.com/u/rupeskum30151",
+      handle: "@rupeskum30151",
       icon: "unstop",
       color: "#f97316",
     },
@@ -347,8 +347,8 @@ export const contactInfo = {
     },
     {
       name: "Twitter",
-      url: "https://twitter.com",
-      handle: "@yourhandle",
+      url: "https://x.com/rupeshkumariims",
+      handle: "@rupeshkumariims",
       icon: "twitter",
       color: "#1d9bf0",
     },
