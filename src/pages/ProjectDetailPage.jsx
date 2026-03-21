@@ -34,7 +34,7 @@ function ContentBlock({ block }) {
           <img
             src={block.src}
             alt={block.alt || ''}
-            className="w-full rounded-2xl border border-white/10 object-cover"
+            className="w-full rounded-2xl border border-white/10 object-contain bg-white/5"
             style={{ maxHeight: block.height || '480px', width: block.width || '100%', ...block.imgStyle }}
           />
           {block.caption && (
