@@ -29,12 +29,7 @@ export default function Navbar() {
     if (pendingScroll && location.pathname === '/') {
       const id = pendingScroll
       setPendingScroll(null)
-      // rAF ensures DOM has painted before we try to scroll
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-        })
-      })
+      sessionStorage.setItem('scrollTo', id)
     }
   }, [location.pathname, pendingScroll])
 

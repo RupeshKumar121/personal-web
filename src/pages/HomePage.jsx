@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import HeroSection from '../components/HeroSection'
 import AboutSection from '../components/AboutSection'
@@ -11,6 +12,18 @@ const pageVariants = {
 }
 
 export default function HomePage() {
+  useEffect(() => {
+    const id = sessionStorage.getItem('scrollTo')
+    if (id) {
+      sessionStorage.removeItem('scrollTo')
+      // Wait for all sections to render before scrolling
+      const timer = setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+      }, 500)
+      return () => clearTimeout(timer)
+    }
+  }, [])
+
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
       <HeroSection />
