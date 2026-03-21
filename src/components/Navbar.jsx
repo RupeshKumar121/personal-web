@@ -12,6 +12,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [pendingScroll, setPendingScroll] = useState(null)
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -23,19 +24,28 @@ export default function Navbar() {
 
   useEffect(() => setMenuOpen(false), [location])
 
+  // When we navigate home with a pending scroll target, scroll once page mounts
+  useEffect(() => {
+    if (pendingScroll && location.pathname === '/') {
+      const id = pendingScroll
+      setPendingScroll(null)
+      // Wait for page render + scroll reset to finish
+      const timer = setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [location.pathname, pendingScroll])
+
   const handleHashLink = (e, href) => {
     if (href.startsWith('/#')) {
       e.preventDefault()
       const id = href.replace('/#', '')
       if (location.pathname === '/') {
-        // Already on home page, just scroll
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
       } else {
-        // Navigate to home first, then scroll after page loads
+        setPendingScroll(id)
         navigate('/')
-        setTimeout(() => {
-          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-        }, 300)
       }
     }
   }

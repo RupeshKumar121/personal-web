@@ -247,8 +247,8 @@ export const contactInfo = {
     },
     {
       name: "Unstop",
-      url: "https://unstop.com/u/rupeskum30151",
-      handle: "@rupeskum30151",
+      url: "https://unstop.com",
+      handle: "@yourhandle",
       icon: "unstop",
       color: "#f97316",
     },
@@ -261,8 +261,8 @@ export const contactInfo = {
     },
     {
       name: "Twitter",
-      url: "https://x.com/rupeshkumariims",
-      handle: "@rupeshkumariims",
+      url: "https://twitter.com",
+      handle: "@yourhandle",
       icon: "twitter",
       color: "#1d9bf0",
     },

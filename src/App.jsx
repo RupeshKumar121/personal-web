@@ -12,7 +12,8 @@ function App() {
   const location = useLocation()
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    // Instantly jump to top on route change so scroll reveal works correctly
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [location.pathname])
 
   return (

@@ -5,24 +5,32 @@ export function useScrollReveal(options = {}) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    // Reset visibility on remount so animations replay on navigation
+    setIsVisible(false)
+
     const el = ref.current
     if (!el) return
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          if (options.once !== false) observer.unobserve(el)
+    // Small delay so scroll-to-top finishes before observer checks position
+    const init = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+            if (options.once !== false) observer.unobserve(el)
+          }
+        },
+        {
+          threshold: options.threshold ?? 0.1,
+          rootMargin: options.rootMargin ?? '0px 0px -40px 0px',
         }
-      },
-      {
-        threshold: options.threshold ?? 0.15,
-        rootMargin: options.rootMargin ?? '0px 0px -60px 0px',
-      }
-    )
+      )
+      observer.observe(el)
 
-    observer.observe(el)
-    return () => observer.disconnect()
+      return () => observer.disconnect()
+    }, 50)
+
+    return () => clearTimeout(init)
   }, [])
 
   return [ref, isVisible]
