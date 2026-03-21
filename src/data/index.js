@@ -246,11 +246,11 @@ export const contactInfo = {
       color: "#5b4638",
     },
     {
-      name: "LeetCode",
-      url: "https://leetcode.com",
+      name: "Unstop",
+      url: "https://unstop.com",
       handle: "@yourhandle",
-      icon: "leetcode",
-      color: "#ffa116",
+      icon: "unstop",
+      color: "#f97316",
     },
     {
       name: "Codeforces",
