@@ -29,11 +29,12 @@ export default function Navbar() {
     if (pendingScroll && location.pathname === '/') {
       const id = pendingScroll
       setPendingScroll(null)
-      // Wait for page render + scroll reset to finish
-      const timer = setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-      }, 100)
-      return () => clearTimeout(timer)
+      // rAF ensures DOM has painted before we try to scroll
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+        })
+      })
     }
   }, [location.pathname, pendingScroll])
 

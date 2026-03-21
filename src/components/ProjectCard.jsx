@@ -9,7 +9,7 @@ export default function ProjectCard({ project, index = 0 }) {
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
+      viewport={{ once: false, margin: '-40px' }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -8 }}
       onClick={() => navigate(`/projects/${project.id}`)}
