@@ -216,7 +216,7 @@ export const about = {
     { label: "Projects Built", value: "15+" },
     { label: "CP Problems Solved", value: "500+" },
     { label: "Cups of Coffee", value: "∞" },
-    { label: "Years Coding", value: "3+" },
+    { label: "Years Coding", value: "7+" },
   ],
 };
 
