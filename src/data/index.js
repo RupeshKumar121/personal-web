@@ -174,7 +174,7 @@ export const projects = [
     problemSolved: "Physical bell interfaces require contact and hardware. AirBell demonstrates that everyday interactions can be reimagined using computer vision — turning a simple webcam into a touchless, gesture-driven trigger with no special equipment or calibration needed.",
     github: "https://github.com/RupeshKumar121/AirBell",
     demo: null,
-    category: ["ML / AI","Compouter Vision"],
+    category: "ML / AI",
     content: [
       {
         type: "heading",
