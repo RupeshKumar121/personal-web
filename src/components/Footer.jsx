@@ -3,9 +3,9 @@ import { Github, Linkedin, Twitter, Code2, Heart } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/RupeshKumar121', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/rupeshkumariims/', label: 'LinkedIn' },
+  { icon: Twitter, href: 'https://x.com/rupeshkumariims', label: 'Twitter' },
 ]
 
 const quickLinks = [
@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-indigo-500/10 bg-void/50 backdrop-blur-sm">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
@@ -85,9 +85,6 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-600 text-xs font-mono">
             © {new Date().getFullYear()} dev.portfolio. All rights reserved.
-          </p>
-          <p className="text-slate-600 text-xs flex items-center gap-1.5">
-            Built with <Heart className="w-3 h-3 text-pink-500 fill-pink-500" /> using React + Vite
           </p>
         </div>
       </div>
