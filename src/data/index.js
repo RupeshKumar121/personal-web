@@ -63,7 +63,7 @@ export const projects = [
       },
       {
         type: "image",
-        src: "/personal-web/img/thumb/rakshak.png",
+        src: "/personal-web/img/content/rakshak1.jpg",
         alt: "Rakshak INSPIRE MANAK Award Certificate",
         caption: "Awarded at the 11th INSPIRE MANAK NLEPC by the Hon'ble Secretary, Department of Science & Technology",
         height: "500px",
