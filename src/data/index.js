@@ -3,7 +3,7 @@ export const projects = [
     id: "rakshak",
     title: "Rakshak — Realtime Accident Detection & Alert System",
     shortDesc: "A nationally recognised IoT + ML road safety system that detects accidents in real time and instantly alerts hospitals, police, and nearby people — awarded at INSPIRE MANAK 11th NLEPC by DST, selected from 7.96 lakh students.",
-    description: "Rakshak is a full-stack road safety solution comprising a custom-built hardware device installed in vehicles, a mobile application, and a national monitoring website. The device uses a machine learning model that analyses gyroscope and accelerometer sensor data in real time to detect road accidents. The moment a collision is detected, the onboard GSM module contacts the Rakshak backend, retrieves the victim's medical profile, and within seconds dispatches automated calls and SMS alerts to the nearest hospital and police station — while simultaneously pushing notifications to every nearby Rakshak app user so bystanders can help immediately. Built by Rupesh Kumar, Class 10, Delhi Public School Bokaro Steel City, Jharkhand — recognised at the 11th INSPIRE MANAK National Level Exhibition and Project Competition by the Hon'ble Secretary, Department of Science and Technology, Government of India.",
+    description: "Rakshak is a road safety solution comprising a custom-built hardware device installed in vehicles, a mobile application, and a national monitoring website. The device uses a machine learning model that analyses gyroscope and accelerometer sensor data in real time to detect road accidents. The moment a collision is detected, the onboard GSM module contacts the Rakshak backend, retrieves the victim's medical profile and nearest hosptial and police contacts, and within seconds dispatches automated calls and SMS alerts to the nearest hospital and police station — while simultaneously pushing notifications to every nearby Rakshak app user so bystanders can help immediately.recognised at the 11th INSPIRE MANAK National Level Exhibition and Project Competition by the Hon'ble Secretary, Department of Science and Technology, Government of India.",
     thumbnail: "/personal-web/img/thumb/rakshak.png",
     banner: "/personal-web/img/banner/rakshak.png",
     tags: ["IoT", "Machine Learning", "Mobile App", "Embedded Systems"],
@@ -52,7 +52,7 @@ export const projects = [
       {
         type: "callout",
         label: "INSPIRE MANAK 11th NLEPC — Department of Science & Technology, Govt. of India",
-        content: "Recognised and awarded at the 11th INSPIRE MANAK National Level Exhibition and Project Competition by the Hon'ble Secretary of the Department of Science and Technology, Government of India. Reference No: 22JH3844178. Selected from 7.96 lakh student participants across the country — one of India's most prestigious student innovation competitions.",
+        content: "Recognised and awarded at the 11th INSPIRE MANAK National Level Exhibition and Project Competition by the Hon'ble Secretary of the Department of Science and Technology, Government of India. Selected from 7.96 lakh student participants across the country — one of India's most prestigious student innovation competitions.",
         color: "#f59e0b",
       },
       {
