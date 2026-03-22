@@ -4,8 +4,8 @@ export const projects = [
     title: "Rakshak — Realtime Accident Detection & Alert System",
     shortDesc: "A nationally recognised IoT + ML road safety system that detects accidents in real time and instantly alerts hospitals, police, and nearby people — awarded at INSPIRE MANAK 11th NLEPC by DST, selected from 7.96 lakh students.",
     description: "Rakshak is a road safety solution comprising a custom-built hardware device installed in vehicles, a mobile application, and a national monitoring website. The device uses a machine learning model that analyses gyroscope and accelerometer sensor data in real time to detect road accidents. The moment a collision is detected, the onboard GSM module contacts the Rakshak backend, retrieves the victim's medical profile and nearest hosptial and police contacts, and within seconds dispatches automated calls and SMS alerts to the nearest hospital and police station — while simultaneously pushing notifications to every nearby Rakshak app user so bystanders can help immediately.recognised at the 11th INSPIRE MANAK National Level Exhibition and Project Competition by the Hon'ble Secretary, Department of Science and Technology, Government of India.",
-    thumbnail: "/personal-web/img/thumb/rakshak.png",
-    banner: "/personal-web/img/banner/rakshak.png",
+    thumbnail: "/personal-web/img/thumb/rakshak.jpg",
+    banner: "/personal-web/img/banner/rakshak.jpg",
     tags: ["IoT", "Machine Learning", "Mobile App", "Embedded Systems"],
     techs: ["Arduino Nano", "Custom PCB", "GSM Module", "Accelerometer", "Gyroscope Sensor", "Machine Learning", "Android App", "Backend Server", "Push Notifications", "GPS", "Firebase"],
     features: [
