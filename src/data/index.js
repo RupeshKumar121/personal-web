@@ -555,7 +555,7 @@ export const skills = [
 // First highlight = indigo, second = purple, third = cyan
 export const about = {
   name: "Rupesh Kumar",
-  photo: "/personal-web/img/profile.jpg",
+  photo: "/personal-web/img/home/homeself.jpg",
   badge: "Available for opportunities",
   paragraphs: [
     "I'm a software engineer and competitive programmer with a passion for building things that matter. Currently pursuing my MBA at [IIM Shillong], I bring a rare blend of technical depth and business thinking to every problem I tackle.",

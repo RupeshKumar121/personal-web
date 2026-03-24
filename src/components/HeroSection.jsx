@@ -42,7 +42,7 @@ export default function HeroSection() {
         style={{ transform: 'scale(1.05)' }}
       >
         <img
-          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=90"
+          src="/personal-web/img/home/homebanner.jpg"
           alt="Mountain landscape"
           className="absolute inset-0 w-full h-full object-cover"
         />
