@@ -77,7 +77,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="mt-4 text-slate-600 text-xs font-mono">
-              dev@example.com
+              rupesh.ipm25@iimshillong.ac.in
             </p>
           </div>
         </div>
