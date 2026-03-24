@@ -51,7 +51,7 @@ function ContentBlock({ block }) {
               <img
                 src={img.src}
                 alt={img.alt || ''}
-                className="w-full rounded-xl border border-white/10 object-cover"
+                className="w-full rounded-xl border border-white/10 object-contain"
                 style={{ height: img.height || '12rem', ...img.style }}
               />
               {img.caption && <figcaption className="text-center text-slate-500 text-xs font-mono mt-1">{img.caption}</figcaption>}
