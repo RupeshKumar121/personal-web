@@ -65,7 +65,7 @@ export default function Navbar() {
               <Code2 className="w-5 h-5 text-white" />
             </div>
             <span className="font-display font-extrabold text-lg tracking-tight text-white/90 group-hover:text-white transition-colors">
-              dev<span className="gradient-text">.portfolio</span>
+             Rupesh Kumar | <span className="gradient-text">Building Things That Matters</span>
             </span>
           </Link>
 

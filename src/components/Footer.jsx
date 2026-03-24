@@ -28,7 +28,7 @@ export default function Footer() {
                 <Code2 className="w-4 h-4 text-white" />
               </div>
               <span className="font-display font-bold text-white/90">
-                dev<span className="gradient-text">.portfolio</span>
+                Rupesh Kumar | <span className="gradient-text">Building Things That Matters</span>
               </span>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-body">
@@ -84,7 +84,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-600 text-xs font-mono">
-            © {new Date().getFullYear()} dev.portfolio. All rights reserved.
+            © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
       </div>
