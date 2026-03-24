@@ -340,9 +340,9 @@ export const projects = [
       },
       {
         type: "image",
-        src: "/personal-web/img/content/airbell1.webp",
+        src: "/personal-web/img/content/airbell1.png",
         alt: "AirBell in action",
-        caption: "Hand landmarks detected with the green trigger box active",
+        caption: "Live Hand landmarks detected with the green trigger box active",
         height: "420px",
       },
     ],
