@@ -63,6 +63,13 @@ export const projects = [
       },
       {
         type: "image",
+        src: "/personal-web/img/content/rakshak2.jpg",
+        alt: "Rakshak INSPIRE MANAK Award Certificate",
+        caption: "Awarded at the 11th INSPIRE MANAK NLEPC by the Hon'ble Secretary, Department of Science & Technology",
+        height: "500px",
+      },
+      {
+        type: "image",
         src: "/personal-web/img/content/rakshak1.jpg",
         alt: "Rakshak INSPIRE MANAK Award Certificate",
         caption: "Awarded at the 11th INSPIRE MANAK NLEPC by the Hon'ble Secretary, Department of Science & Technology",
@@ -71,6 +78,13 @@ export const projects = [
       {
         type: "heading",
         content: "The Rakshak Device",
+      },
+      {
+        type: "image",
+        src: "/personal-web/img/content/rakshak3.jpg",
+        alt: "Rakshak INSPIRE MANAK Award Certificate",
+        caption: "Awarded at the 11th INSPIRE MANAK NLEPC by the Hon'ble Secretary, Department of Science & Technology",
+        height: "500px",
       },
       {
         type: "text",
@@ -97,6 +111,24 @@ export const projects = [
       {
         type: "heading",
         content: "The Rakshak Mobile App",
+      },
+      {
+        type: "images",
+        cols: 2,
+        items: [
+          {
+            src: "/personal-web/img/content/rakshaka.png",
+            alt: "Rakshak mobile app",
+            caption: "Mobile app showing Home view",
+            height: "300px",
+          },
+          {
+            src: "/personal-web/img/content/rakshakb.png",
+            alt: "Rakshak mobile app",
+            caption: "Mobile app showing live accident notifications",
+            height: "300px",
+          },
+        ],
       },
       {
         type: "text",
