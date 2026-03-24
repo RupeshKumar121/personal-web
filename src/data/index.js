@@ -114,18 +114,24 @@ export const projects = [
       },
       {
         type: "images",
-        cols: 2,
+        cols: 3,
         items: [
           {
-            src: "/personal-web/img/content/rakshaka.png",
+            src: "/personal-web/img/content/rakshaka.jpg",
             alt: "Rakshak mobile app",
             caption: "Mobile app showing Home view",
             height: "300px",
           },
           {
-            src: "/personal-web/img/content/rakshakb.png",
+            src: "/personal-web/img/content/rakshakb.jpg",
             alt: "Rakshak mobile app",
             caption: "Mobile app showing live accident notifications",
+            height: "300px",
+          },
+          {
+            src: "/personal-web/img/content/rakshakc.jpg",
+            alt: "Rakshak mobile app",
+            caption: "Mobile app showing My Vehicle Section",
             height: "300px",
           },
         ],
@@ -181,6 +187,13 @@ export const projects = [
         content: "How It Works",
       },
       {
+        type: "image",
+        src: "/personal-web/img/content/signlang2.jpg",
+        alt: "Sign Language Translator in action",
+        caption: "Live sign to text translation with finger-point landmark overlay",
+        height: "420px",
+      },
+      {
         type: "text",
         content: "The system has two translation modes. In Sign → Text mode, the webcam detects your hand in real time, extracts the 21 landmark points, and feeds the skeletal map into a CNN that classifies the gesture. The predicted letter is printed on screen and accumulated into words. In Voice → Sign mode, the microphone records 5 seconds of speech, Google Speech-to-Text transcribes it, and the corresponding ASL sign images are displayed letter by letter from a pre-built image library.",
       },
@@ -201,7 +214,7 @@ export const projects = [
         type: "image",
         src: "/personal-web/img/content/signlang1.jpg",
         alt: "Sign Language Translator in action",
-        caption: "Live sign to text translation with finger-point landmark overlay",
+        caption: "Live voice to sign translation",
         height: "420px",
       },
       {
