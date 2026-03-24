@@ -23,8 +23,8 @@ export const projects = [
       "National monitoring dashboard at rakshak.me for police and authorities to track accidents and speeding hotspots",
     ],
     problemSolved: "More than 462 people die every day in road accidents in India. Around 70% of accidents are caused by over-speeding, and over 30% of deaths occur simply because ambulances are informed too late. Rakshak addresses both — detecting accidents the moment they happen and alerting emergency services instantly, while monitoring speed in real time to prevent collisions before they occur.",
-    github: "https://github.com/RupeshKumar121",
-    demo: "https://rakshak.me",
+    github: "https://github.com/RupeshKumar121/Rakshak_InspireManak_2023",
+    demo: null,
     category: "IoT",
     content: [
       {
