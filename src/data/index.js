@@ -561,7 +561,7 @@ export const about = {
     "I’m a builder who enjoys solving real problems through technology. Currently pursuing the [IPM] program at [IIM Shillong], I combine strong technical skills with an understanding of business to build solutions that are both impactful and scalable.",
     "I’m currently building [Rakshak], a road safety system that detects accidents and immediately alerts nearby hospitals and people, aiming to reduce response time and save lives. Working on it end to end from hardware to software has shaped how I approach real world problem solving.",
     "I started with [competitive programming], which trained me to think clearly, break down complex problems, and perform under pressure. That mindset now reflects in everything I build.",
-    "My primary focus is on [AI] and [Machine learning], especially in real-world applications. I enjoy building models from scratch and adapting them to specific use cases. I’m also deeply interested in [Financial markets] and like exploring how technology and AI can be applied to build smarter, data-driven systems in that space.",
+    "My primary focus is on [AI] and [Machine learning], especially in real-world applications. I enjoy building models from scratch and adapting them to specific use cases. I’m also deeply interested in [Financial markets], particularly [Algorithmic Quant Trading], and like exploring how technology and AI can be used to build smarter, data-driven systems to solve real world problems.",
   ],
   stats: [
     { label: "Projects Built", value: "15+" },
