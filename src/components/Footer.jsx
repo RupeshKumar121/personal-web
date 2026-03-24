@@ -28,7 +28,7 @@ export default function Footer() {
                 <Code2 className="w-4 h-4 text-white" />
               </div>
               <span className="font-display font-bold text-white/90">
-                Rupesh Kumar | <span className="gradient-text">Building Things That Matters</span>
+                Rupesh Kumar | <span className="gradient-text">Building Real-World Solutions</span>
               </span>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-body">
