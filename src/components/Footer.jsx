@@ -32,7 +32,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs font-body">
-              Not just learning, also building. Crafting elegant solutions one commit at a time.
+              Not just learning, also building. Software engineer & entrepreneur focused on building impactful, real-world solutions through technology. Crafting elegant solutions one commit at a time.
             </p>
           </div>
 

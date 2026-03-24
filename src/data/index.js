@@ -556,11 +556,12 @@ export const skills = [
 export const about = {
   name: "Rupesh Kumar",
   photo: "/personal-web/img/home/homeself.jpg",
-  badge: "Available for opportunities",
+  badge: null,
   paragraphs: [
-    "I'm a software engineer and competitive programmer with a passion for building things that matter. Currently pursuing my MBA at [IIM Shillong], I bring a rare blend of technical depth and business thinking to every problem I tackle.",
-    "My journey in tech started with competitive programming — grinding through algorithms and data structures taught me to think clearly under pressure. That foundation now powers everything I build, from [algorithmic trading systems] to full-stack web applications.",
-    "When I'm not writing code, I'm exploring financial markets, contributing to open source, or mentoring peers through platforms like [SkillSwap] — a peer-learning app I built to digitize knowledge exchange within college communities.",
+    "I’m a builder who enjoys solving real problems through technology. Currently pursuing the [IPM] program at [IIM Shillong], I combine strong technical skills with an understanding of business to build solutions that are both impactful and scalable.",
+    "I’m currently building [Rakshak], a road safety system that detects accidents and immediately alerts nearby hospitals and people, aiming to reduce response time and save lives. Working on it end to end from hardware to software has shaped how I approach real world problem solving.",
+    "I started with [competitive programming], which trained me to think clearly, break down complex problems, and perform under pressure. That mindset now reflects in everything I build.",
+    "My primary focus is on [AI] and [Machine learning], especially in real-world applications. I enjoy building models from scratch and adapting them to specific use cases. I’m also deeply interested in [Financial markets] and like exploring how technology and AI can be applied to build smarter, data-driven systems in that space.",
   ],
   stats: [
     { label: "Projects Built", value: "15+" },
@@ -571,8 +572,8 @@ export const about = {
 };
 
 export const contactInfo = {
-  email: "xxxxxxxxxx@iimshillong.ac.in",
-  phone: "+91 xxxxxxxxxx",
+  email: "rupesh.ipm25@iimshillong.ac.in",
+  phone: "+91 9602069257",
   profiles: [
     {
       name: "GitHub",
