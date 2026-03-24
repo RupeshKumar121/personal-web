@@ -68,7 +68,7 @@ export default function AboutSection() {
               <img
                 src={about.photo}
                 alt={about.name}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain object-top"
                 onError={(e) => {
                   e.target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=90'
                 }}
