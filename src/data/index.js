@@ -438,8 +438,8 @@ export const projects = [
     title: "Diabetes Neural Network Built from Scratch",
     shortDesc: "A fully handcrafted feedforward neural network built using only NumPy no TensorFlow, no PyTorch trained on the PIMA Indians Diabetes Dataset to classify patients as diabetic or non diabetic with real time predictions.",
     description: "A complete feedforward neural network implemented entirely from scratch in pure Python and NumPy. Every component layers, activations, loss functions, backpropagation, and the SGD optimizer with momentum and learning rate decay is written manually without any ML framework. The model is trained on the PIMA Indians Diabetes Dataset, classifying patients based on 8 clinical features. Includes He weight initialization, ReLU and Softmax activations, categorical cross entropy loss with a fused backward pass, and a patient prediction function that outputs confidence scores. Generates training loss curves, accuracy tracking, and a confusion matrix.",
-    thumbnail: "/personal-web/img/thumb/diabetes.svg",
-    banner: "/personal-web/img/banner/diabetes.webp",
+    thumbnail: "/personal-web/img/thumb/diabetes.webp",
+    banner: "/personal-web/img/banner/diabetes.png",
     tags: ["Machine Learning", "Python", "Neural Networks", "Healthcare"],
     techs: ["Python", "NumPy", "Matplotlib", "PIMA Indians Dataset", "He Initialization", "ReLU", "Softmax", "SGD with Momentum"],
     features: [
