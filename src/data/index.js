@@ -435,26 +435,26 @@ export const projects = [
   },
   {
     id: "diabetes-neural-network",
-    title: "Diabetes Neural Network — Built from Scratch",
-    shortDesc: "A fully handcrafted feedforward neural network built using only NumPy — no TensorFlow, no PyTorch — trained on the PIMA Indians Diabetes Dataset to classify patients as diabetic or non-diabetic with real-time predictions.",
-    description: "A complete feedforward neural network implemented entirely from scratch in pure Python and NumPy. Every component — layers, activations, loss functions, backpropagation, and the SGD optimizer with momentum and learning rate decay — is written manually without any ML framework. The model is trained on the PIMA Indians Diabetes Dataset, classifying patients based on 8 clinical features. Includes He weight initialization, ReLU and Softmax activations, categorical cross-entropy loss with a fused backward pass, and a patient prediction function that outputs confidence scores. Generates training loss curves, accuracy tracking, and a confusion matrix.",
+    title: "Diabetes Neural Network Built from Scratch",
+    shortDesc: "A fully handcrafted feedforward neural network built using only NumPy no TensorFlow, no PyTorch trained on the PIMA Indians Diabetes Dataset to classify patients as diabetic or non diabetic with real time predictions.",
+    description: "A complete feedforward neural network implemented entirely from scratch in pure Python and NumPy. Every component layers, activations, loss functions, backpropagation, and the SGD optimizer with momentum and learning rate decay is written manually without any ML framework. The model is trained on the PIMA Indians Diabetes Dataset, classifying patients based on 8 clinical features. Includes He weight initialization, ReLU and Softmax activations, categorical cross entropy loss with a fused backward pass, and a patient prediction function that outputs confidence scores. Generates training loss curves, accuracy tracking, and a confusion matrix.",
     thumbnail: "/personal-web/img/thumb/diabetes.svg",
     banner: "/personal-web/img/banner/diabetes.webp",
     tags: ["Machine Learning", "Python", "Neural Networks", "Healthcare"],
     techs: ["Python", "NumPy", "Matplotlib", "PIMA Indians Dataset", "He Initialization", "ReLU", "Softmax", "SGD with Momentum"],
     features: [
-      "Entire neural network written from scratch in pure Python and NumPy — no ML frameworks used",
+      "Entire neural network written from scratch in pure Python and NumPy no ML frameworks used",
       "8-feature clinical input processed through two hidden ReLU layers (64 → 32 neurons) and a Softmax output layer",
       "He weight initialization to prevent vanishing/exploding gradients in ReLU networks",
       "Categorical cross-entropy loss with fused Softmax + cross-entropy backward pass for numerical stability",
       "SGD optimizer with momentum (0.85) and learning rate decay for fast convergence and precise fine-tuning",
-      "Missing value imputation — zero values in medical columns replaced with column mean before training",
+      "Missing value imputation zero values in medical columns replaced with column mean before training",
       "Min-max normalization applied to all features; 80/20 train-test split with shuffling (seed=42)",
-      "Patient prediction function — takes raw health metrics, normalizes them, runs a forward pass, and outputs diabetic/non-diabetic verdict with confidence percentage",
+      "Patient prediction function takes raw health metrics, normalizes them, runs a forward pass, and outputs diabetic/non-diabetic verdict with confidence percentage",
       "Training loss curve, train vs test accuracy plot, and confusion matrix generated and saved automatically",
       "Epoch-level logging every 500 steps: loss, training accuracy, test accuracy, and current learning rate",
     ],
-    problemSolved: "Diabetes affects hundreds of millions globally, yet many cases go undetected until complications arise. Early, accessible screening tools can significantly change patient outcomes. This project demonstrates that a neural network capable of meaningful medical classification can be built entirely from mathematical first principles — no black-box libraries — making every decision in the model transparent and understandable.",
+    problemSolved: "Diabetes affects hundreds of millions globally, yet many cases go undetected until complications arise. Early, accessible screening tools can significantly change patient outcomes. This project demonstrates that a neural network capable of meaningful medical classification can be built entirely from mathematical first principles no black box libraries making every decision in the model transparent and understandable.",
     github: "https://github.com/RupeshKumar121/diabetes_nn",
     demo: null,
     category: "Machine Learning",
@@ -466,7 +466,7 @@ export const projects = [
       {
         type: "callout",
         label: "No Frameworks, No Shortcuts",
-        content: "Most ML projects today are a few lines of sklearn or PyTorch. This project takes the opposite approach — every neuron, every gradient, every weight update is computed manually. The goal was to deeply understand what actually happens inside a neural network, not just call fit() and read an accuracy score.",
+        content: "Most ML projects today are a few lines of sklearn or PyTorch. This project takes the opposite approach every neuron, every gradient, every weight update is computed manually. The goal was to deeply understand what actually happens inside a neural network, not just call fit() and read an accuracy score.",
         color: "#6366f1",
       },
       {
@@ -475,12 +475,12 @@ export const projects = [
       },
       {
         type: "text",
-        content: "The PIMA Indians Diabetes Dataset is a well-known public domain medical dataset originally from the National Institute of Diabetes and Digestive and Kidney Diseases. It contains 768 patient records with 8 clinical features — Pregnancies, Glucose, Blood Pressure, Skin Thickness, Insulin, BMI, Diabetes Pedigree Function, and Age — and a binary label indicating whether the patient is diabetic. The dataset has a known challenge: several medical columns contain zeros that are physiologically impossible (a blood pressure of 0, for example) and represent missing data. These are detected and replaced with column means before training.",
+        content: "The PIMA Indians Diabetes Dataset is a well known public domain medical dataset originally from the National Institute of Diabetes and Digestive and Kidney Diseases. It contains 768 patient records with 8 clinical features Pregnancies, Glucose, Blood Pressure, Skin Thickness, Insulin, BMI, Diabetes Pedigree Function, and Age and a binary label indicating whether the patient is diabetic. The dataset has a known challenge: several medical columns contain zeros that are physiologically impossible (a blood pressure of 0, for example) and represent missing data. These are detected and replaced with column means before training.",
       },
       {
         type: "callout",
         label: "Preprocessing Pipeline",
-        content: "Zero values in Glucose, Blood Pressure, Skin Thickness, Insulin, and BMI are treated as missing and replaced with the column mean. All 8 features are then min-max normalized to [0, 1]. The dataset is shuffled with a fixed seed (42) and split 80/20 into training and test sets — giving approximately 614 training samples and 154 test samples.",
+        content: "Zero values in Glucose, Blood Pressure, Skin Thickness, Insulin, and BMI are treated as missing and replaced with the column mean. All 8 features are then min-max normalized to [0, 1]. The dataset is shuffled with a fixed seed (42) and split 80/20 into training and test sets giving approximately 614 training samples and 154 test samples.",
         color: "#06b6d4",
       },
       {
@@ -489,7 +489,7 @@ export const projects = [
       },
       {
         type: "text",
-        content: "The network is a three-layer feedforward architecture: an input layer accepting 8 features, a first hidden layer of 64 neurons with ReLU activation, a second hidden layer of 32 neurons with ReLU activation, and a 2-neuron output layer with Softmax producing P(No Diabetes) and P(Diabetes). Weights are initialised using He initialisation — scaling by √(2/n_inputs) — which is specifically designed for ReLU networks to keep activations in a healthy range and prevent vanishing or exploding gradients from the very first forward pass.",
+        content: "The network is a three layer feedforward architecture: an input layer accepting 8 features, a first hidden layer of 64 neurons with ReLU activation, a second hidden layer of 32 neurons with ReLU activation, and a 2 neuron output layer with Softmax producing P(No Diabetes) and P(Diabetes). Weights are initialised using He initialisation scaling by √(2/n_inputs) — which is specifically designed for ReLU networks to keep activations in a healthy range and prevent vanishing or exploding gradients from the very first forward pass.",
       },
       {
         type: "heading",
@@ -497,7 +497,7 @@ export const projects = [
       },
       {
         type: "text",
-        content: "ReLU is used in both hidden layers. It passes positive inputs through unchanged and zeros out negatives, introducing non-linearity while keeping gradients clean — the backward pass simply blocks gradient flow where the input was negative. The output layer uses Softmax, which converts raw scores into a probability distribution summing to 1. The implementation uses exp(x − max(x)) for numerical stability. Loss is computed with categorical cross-entropy, clipped to [1e-7, 1−1e-7] to avoid log(0) errors. The backward pass uses a fused Softmax + cross-entropy gradient — a mathematical simplification that reduces the combined derivative to just subtracting 1 from the predicted probability at the correct class index, then dividing by batch size. This is both faster and more numerically stable than computing the two gradients separately.",
+        content: "ReLU is used in both hidden layers. It passes positive inputs through unchanged and zeros out negatives, introducing non linearity while keeping gradients clean the backward pass simply blocks gradient flow where the input was negative. The output layer uses Softmax, which converts raw scores into a probability distribution summing to 1. The implementation uses exp(x − max(x)) for numerical stability. Loss is computed with categorical cross entropy, clipped to [1e-7, 1−1e-7] to avoid log(0) errors. The backward pass uses a fused Softmax + cross-entropy gradient a mathematical simplification that reduces the combined derivative to just subtracting 1 from the predicted probability at the correct class index, then dividing by batch size. This is both faster and more numerically stable than computing the two gradients separately.",
       },
       {
         type: "heading",
@@ -506,7 +506,7 @@ export const projects = [
       {
         type: "callout",
         label: "SGD with Momentum and Learning Rate Decay",
-        content: "Instead of updating weights directly with the raw gradient, momentum accumulates a velocity in the direction of consistent gradients — like a ball rolling downhill that builds up speed over time. With momentum set to 0.85, the optimizer blends the current gradient with the previous update direction, smoothing out oscillations. Learning rate decay reduces the step size progressively over epochs using current_lr = initial_lr × (1 / (1 + decay × iterations)), allowing large early steps for fast convergence and small precise steps later for fine-tuning.",
+        content: "Instead of updating weights directly with the raw gradient, momentum accumulates a velocity in the direction of consistent gradients like a ball rolling downhill that builds up speed over time. With momentum set to 0.85, the optimizer blends the current gradient with the previous update direction, smoothing out oscillations. Learning rate decay reduces the step size progressively over epochs using current_lr = initial_lr × (1 / (1 + decay × iterations)), allowing large early steps for fast convergence and small precise steps later for fine tuning.",
         color: "#10b981",
       },
       {
@@ -515,7 +515,7 @@ export const projects = [
       },
       {
         type: "text",
-        content: "The model trains for 5000 epochs, logging loss, training accuracy, test accuracy, and current learning rate every 500 steps. Three plots are generated and saved — a training loss curve showing how loss decreases across epochs, a train vs test accuracy chart to monitor for overfitting, and a confusion matrix on the test set showing True Positives, True Negatives, False Positives, and False Negatives.",
+        content: "The model trains for 5000 epochs, logging loss, training accuracy, test accuracy, and current learning rate every 500 steps. Three plots are generated and saved a training loss curve showing how loss decreases across epochs, a train vs test accuracy chart to monitor for overfitting, and a confusion matrix on the test set showing True Positives, True Negatives, False Positives, and False Negatives.",
       },
       {
         type: "images",
@@ -539,7 +539,7 @@ export const projects = [
         type: "image",
         src: "/personal-web/img/content/diabetes3.png",
         alt: "Confusion Matrix",
-        caption: "Confusion matrix on the test set — True Positives, True Negatives, False Positives, False Negatives",
+        caption: "Confusion matrix on the test set True Positives, True Negatives, False Positives, False Negatives",
         height: "420px",
       },
       {
@@ -548,7 +548,7 @@ export const projects = [
       },
       {
         type: "text",
-        content: "The predict_diabetes() function takes a plain dictionary of patient health values, applies the exact same min-max normalization used during training, runs a forward pass through the trained network, and outputs a clear verdict — DIABETIC ⚠ or NON-DIABETIC ✓ — along with a confidence percentage and the full probability breakdown for both classes. For example, a patient with Glucose 148, BMI 33.6, age 50, and a Diabetes Pedigree of 0.627 returns a DIABETIC prediction with 91.3% confidence.",
+        content: "The predict_diabetes() function takes a plain dictionary of patient health values, applies the exact same min-max normalization used during training, runs a forward pass through the trained network, and outputs a clear verdict DIABETIC ⚠ or NON-DIABETIC ✓ along with a confidence percentage and the full probability breakdown for both classes. For example, a patient with Glucose 148, BMI 33.6, age 50, and a Diabetes Pedigree of 0.627 returns a DIABETIC prediction with 91.3% confidence.",
       },
       {
         type: "callout",
