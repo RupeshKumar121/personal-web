@@ -438,8 +438,8 @@ export const projects = [
     title: "Diabetes Neural Network — Built from Scratch",
     shortDesc: "A fully handcrafted feedforward neural network built using only NumPy — no TensorFlow, no PyTorch — trained on the PIMA Indians Diabetes Dataset to classify patients as diabetic or non-diabetic with real-time predictions.",
     description: "A complete feedforward neural network implemented entirely from scratch in pure Python and NumPy. Every component — layers, activations, loss functions, backpropagation, and the SGD optimizer with momentum and learning rate decay — is written manually without any ML framework. The model is trained on the PIMA Indians Diabetes Dataset, classifying patients based on 8 clinical features. Includes He weight initialization, ReLU and Softmax activations, categorical cross-entropy loss with a fused backward pass, and a patient prediction function that outputs confidence scores. Generates training loss curves, accuracy tracking, and a confusion matrix.",
-    thumbnail: "/personal-web/img/thumb/diabetes-nn.jpg",
-    banner: "/personal-web/img/banner/diabetes-nn.jpg",
+    thumbnail: "/personal-web/img/thumb/diabetes.svg",
+    banner: "/personal-web/img/banner/diabetes.webp",
     tags: ["Machine Learning", "Python", "Neural Networks", "Healthcare"],
     techs: ["Python", "NumPy", "Matplotlib", "PIMA Indians Dataset", "He Initialization", "ReLU", "Softmax", "SGD with Momentum"],
     features: [
@@ -518,15 +518,26 @@ export const projects = [
         content: "The model trains for 5000 epochs, logging loss, training accuracy, test accuracy, and current learning rate every 500 steps. Three plots are generated and saved — a training loss curve showing how loss decreases across epochs, a train vs test accuracy chart to monitor for overfitting, and a confusion matrix on the test set showing True Positives, True Negatives, False Positives, and False Negatives.",
       },
       {
-        type: "image",
-        src: "/personal-web/img/content/diabetes-nn1.png",
-        alt: "Training Loss and Accuracy Curves",
-        caption: "Training loss, train vs test accuracy tracked over 5000 epochs",
-        height: "420px",
+        type: "images",
+        cols: 2,
+        items: [
+          {
+            src: "/personal-web/img/content/diabetes1.png",
+            alt: "Model Loss Function",
+            caption: "Model Loss Function While Training",
+            height: "300px",
+          },
+          {
+            src: "/personal-web/img/content/diabetes2.png",
+            alt: "Model Accuracy",
+            caption: "Model Accuracy While Training and Testing",
+            height: "300px",
+          },
+        ],
       },
       {
         type: "image",
-        src: "/personal-web/img/content/diabetes-nn2.png",
+        src: "/personal-web/img/content/diabetes3.png",
         alt: "Confusion Matrix",
         caption: "Confusion matrix on the test set — True Positives, True Negatives, False Positives, False Negatives",
         height: "420px",
