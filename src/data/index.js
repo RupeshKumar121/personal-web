@@ -148,6 +148,28 @@ export const projects = [
         type: "text",
         content: "Beyond individual users, Rakshak operates at a national scale through its web dashboard. Police forces, traffic authorities, and government bodies can log in to monitor real time accident reports and over speeding incidents across the country. The dashboard highlights accident prone areas, tracks repeat speeding corridors, and provides structured, reliable data for road safety analysis and infrastructure planning. Unlike current accident reporting systems that rely on manual filing and delayed data, Rakshak generates automatic, timestamped, location tagged records the moment each incident is detected giving authorities accurate data in real time. In the long term, this data infrastructure can significantly improve road safety policy, accident research, and resource allocation for emergency services across India.",
       },
+      {
+        type: "heading",
+        content: "Rakshak In News",
+      },
+      {
+        type: "images",
+        cols: 2,
+        items: [
+          {
+            src: "/personal-web/img/content/rakshake.jpg",
+            alt: "In News Danik Bhaskar 21 September 2024",
+            caption: "In News Danik Bhaskar 21 September 2024",
+            height: "750px",
+          },
+          {
+            src: "/personal-web/img/content/rakshakd.jpg",
+            alt: "In News Sunday Standard New Delhi 16 March 2025",
+            caption: "In News Sunday Standard New Delhi 16 March 2025",
+            height: "750px",
+          },
+        ],
+      },
     ],
   },
   {
