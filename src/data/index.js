@@ -57,7 +57,7 @@ export const projects = [
       },
       {
         type: "callout",
-        label: "Patent Filing & Development Funding — National Innovation Foundation",
+        label: "Patent Filing & Development Funding from National Innovation Foundation",
         content: "Secured patent filing support through the National Innovation Foundation (NIF) under DST, and received development funding of ₹35,000 from NIF and DST , formally recognising the commercial viability, technical depth, and societal impact of the Rakshak solution. Patent Filled through support of DST",
         color: "#f59e0b",
       },
@@ -489,7 +489,7 @@ export const projects = [
       },
       {
         type: "text",
-        content: "The network is a three layer feedforward architecture: an input layer accepting 8 features, a first hidden layer of 64 neurons with ReLU activation, a second hidden layer of 32 neurons with ReLU activation, and a 2 neuron output layer with Softmax producing P(No Diabetes) and P(Diabetes). Weights are initialised using He initialisation scaling by √(2/n_inputs) — which is specifically designed for ReLU networks to keep activations in a healthy range and prevent vanishing or exploding gradients from the very first forward pass.",
+        content: "The network is a three layer feedforward architecture: an input layer accepting 8 features, a first hidden layer of 64 neurons with ReLU activation, a second hidden layer of 32 neurons with ReLU activation, and a 2 neuron output layer with Softmax producing P(No Diabetes) and P(Diabetes). Weights are initialised using He initialisation scaling by √(2/n_inputs), which is specifically designed for ReLU networks to keep activations in a healthy range and prevent vanishing or exploding gradients from the very first forward pass.",
       },
       {
         type: "heading",
