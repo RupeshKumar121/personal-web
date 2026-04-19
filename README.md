@@ -1,6 +1,6 @@
-# 🚀 Dev Portfolio — Setup & Run Guide
+# 🚀 Dev Portfolio Setup & Run Guide
 
-A modern, full-featured developer portfolio built with **React + Vite + TailwindCSS + Framer Motion**.
+A modern, full featured developer portfolio built with **React + Vite + TailwindCSS + Framer Motion**.
 
 ---
 
@@ -78,19 +78,6 @@ Then open **http://localhost:5173** in your browser.
 ---
 
 ## 🔧 Customization
-
-### Update Your Info
-
-All your personal data is in one file:
-
-```
-src/data/index.js
-```
-
-Edit:
-- `projects` array — your projects with all details
-- `skills` array — your skills with proficiency levels
-- `contactInfo` object — your email, phone, and social profiles
 
 ### Update Hero Image
 
