@@ -133,7 +133,3 @@ npm run preview
 - Add your real GitHub, LinkedIn, CodeChef links in `contactInfo`
 - Customize the hero text in `HeroSection.jsx`
 - Add more skills by extending the `skills` array
-
----
-
-Built with ❤️ and lots of `git commit`s.
